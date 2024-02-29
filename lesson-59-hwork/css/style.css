@@ -1,0 +1,79 @@
+body {
+  background-color: #1e1e20;
+}
+
+.wrapper {
+  padding: 50px;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  height: 800px;
+  background-color: #444;
+}
+
+.block-1 {
+  background-color: rgba(218, 61, 61, .9);
+  height: 200px;
+  width: 200px;
+  position: absolute;
+}
+
+.block-2 {
+  background-color: rgba(55, 55, 207, .9);
+  height: 200px;
+  width: 200px;
+  position: absolute;
+}
+
+.block-3 {
+  background-color: rgba(18, 163, 18, 0.9);
+  height: 200px;
+  width: 200px;
+  position: absolute;
+}
+
+/* -------------------------------------- */
+
+/* сделать горизонтальную анимацию */
+/* мб даже диагональную */
+
+.block-1 {
+  animation: move-right 3s linear infinite alternate;
+}
+
+.block-2 {
+  animation: move-bottom 3s linear infinite alternate;
+}
+
+.block-3 {
+  animation: moveDiagonally 3s linear infinite alternate;
+}
+
+@keyframes move-right {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: calc(100% - 200px);
+  }
+}
+
+@keyframes move-bottom {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: calc(100% - 200px);
+  }
+}
+
+@keyframes moveDiagonally {
+  0% {
+      transform: translatex(0px) translatey(0px)
+  }
+  100% {
+      transform: translatex(575%) translatey(300%);
+  }
+}
