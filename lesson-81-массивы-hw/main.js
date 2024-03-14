@@ -5,3 +5,9 @@ for (let i = 0; i < numbers.length; i++) {
         console.log(numbers[i])
     }
 }
+
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple']
+
+for (let i = colors.length - 1; i >= 0; i--) {
+    console.log(colors[i])
+}
