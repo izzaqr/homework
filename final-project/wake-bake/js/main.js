@@ -1,24 +1,43 @@
-const burgerIcon = document.querySelector('.burger-icon')
-const navLinks = document.querySelectorAll('.nav__link')
-const body = document.querySelector('body')
+(function () {
 
+    // burger menu
+    document.addEventListener('click', burgerInit);
 
-function openMenu() {
-    body.classList.add('body--opened-menu')
-}
+    function burgerInit(e) {
+        const burgerIcon = e.target.closest('.burger-icon');
+        const burgerNavLink = e.target.closest('.nav__link')
 
-function closeMenu() {
-    body.classList.remove('body--opened-menu')
-}
+        if (!burgerIcon && !burgerNavLink) return
 
-burgerIcon.addEventListener('click', function() {
-    if (body.classList.contains('body--opened-menu')) {
-        closeMenu()
-    } else {
-        openMenu()
+        // if (burgerIcon) {
+        //     e.preventDefault()
+        // }
+
+        if (!document.body.classList.contains('body--opened-menu')) {
+            document.body.classList.add('body--opened-menu')
+        } else {
+            document.body.classList.remove('body--opened-menu')
+        }
     }
-});
 
-navLinks.forEach(function(navLinks) {
-    navLinks.addEventListener('click', closeMenu)
-})
+    // modal window
+    const modal = document.querySelector('.modal')
+    const modalButton = document.querySelector('.about__gift-icon')
+
+    modalButton.addEventListener('click', openModal)
+    modal.addEventListener('click', closeModal)
+
+    function openModal(e) {
+        e.preventDefault()
+        document.body.classList.add('body--opened-modal')
+    }
+
+    function closeModal(e) {
+        e.preventDefault()
+
+        if (e.target.closest('.modal__cancel') || e.target.classList.contains('modal')) {
+            document.body.classList.remove('body--opened-modal')
+        }
+    }
+
+})()
