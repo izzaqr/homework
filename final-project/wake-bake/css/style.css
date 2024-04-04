@@ -1039,7 +1039,7 @@
     }
 }
 
-@media (max-width: 385px) {
+@media (max-width: 370px) {
     .modal__window {
         height: 115vw;
     }
