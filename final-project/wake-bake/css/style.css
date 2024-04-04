@@ -152,7 +152,7 @@
     border: 1px solid var(--inputy);
     border-radius: 100px;
     padding: 19px 79px 19px 28px;
-    width: 308px;
+    width: 100%;
     height: 62px;
     font-size: 15px;
     transition: all .4s;
@@ -179,6 +179,10 @@
 
 .modal__input:hover::placeholder {
     color: var(--akcentnyy);
+}
+
+.modal__button {
+    width: 100%;
 }
 
 /* -------------------------- */
@@ -941,6 +945,7 @@
 @media (max-width: 500px) {
     .about {
         padding: 80 15px;
+        padding: 60px 0;
     }
 
     .about__overview {
@@ -953,6 +958,8 @@
 
     .about__title h2 {
         font-size: 60px;
+        text-align: left;
+        font-size: 12vw;
     }
 
     .about__title p {
@@ -962,6 +969,7 @@
     .about__text {
         font-size: 3.4vw;
         max-width: 400px;
+        text-align: left;
     }
 
 
@@ -975,20 +983,80 @@
     }
 }
 
-@media (max-width: 500px) {
-    .about {
-        padding: 60px 0;
+@media (max-width: 450px) {
+    .modal__window {
+        width: 90%;
+        height: 100vw;
     }
 
-    .about__title {
-        text-align: left;
+    .modal__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
     }
 
-    .about__title h2 {
-        font-size: 12vw;
+    .modal__img img {
+        width: 50vw;
     }
 
-    .about__text {
-        text-align: left;
+    .modal__content {
+        padding-bottom: 10px;
+        width: 110%;
+        margin: 0 -10px;
+    }
+
+    .modal__title {
+        font-size: 9vw;
+        text-align: center;
+    }
+
+    .title__text {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .modal__label {
+        justify-self: center;
+        width: 120%;
+    }
+
+    .modal__button {
+        justify-self: center;
+        width: 120%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .modal__content {
+        width: 112%;
+    }
+
+    .modal__button {
+        font-size: 4vw;
+        align-items: center;
+    }
+}
+
+@media (max-width: 385px) {
+    .modal__window {
+        height: 115vw;
+    }
+
+    .modal__form {
+        gap: 2px;
+    }
+
+    .modal__label {
+        height: 90%;
+    }
+
+    .modal__input {
+        height: 100%;
+    }
+
+    .modal__button {
+        height: 90%;
     }
 }
