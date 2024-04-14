@@ -1,6 +1,7 @@
 (function () {
 
     // burger menu
+
     document.addEventListener('click', burgerInit);
 
     function burgerInit(e) {
@@ -20,7 +21,9 @@
         }
     }
 
+
     // modal window
+
     const modal = document.querySelector('.modal')
     const modalButton = document.querySelector('.about__gift-icon')
 
@@ -39,5 +42,59 @@
             document.body.classList.remove('body--opened-modal')
         }
     }
+
+
+    // tabs
+
+    const tabControls = document.querySelector('.tab__controls')
+
+    tabControls.addEventListener('click', switchTab)
+
+    function switchTab(e) {
+
+        const tabLink = e.target.closest('.tab__controls-link')
+
+        e.preventDefault()
+
+        if (!tabLink) return
+        if (tabLink.classList.contains('tab__controls-link--active')) return
+
+        const tabContentID = tabLink.getAttribute('href')
+        const tabContent = document.querySelector(tabContentID)
+        const activeLink = document.querySelector('.accordion__content--show')
+        const activeContent = document.querySelector('.tab__controls-link--active')
+
+        if (activeLink) {
+            activeLink.classList.remove('accordion__content--show')
+        }
+
+        if (activeContent) {
+            activeContent.classList.remove('tab__controls-link--active')
+        }
+
+        tabContent.classList.add('accordion__content--show')
+        tabLink.classList.add('tab__controls-link--active')
+    }
+
+    // accordion
+
+    const accordionLists = document.querySelectorAll('.accordion-list')
+
+    accordionLists.forEach(el => {
+        el.addEventListener('click', (e) => {
+            const accordionControl = e.target.closest('.accordion-list__control')
+            if (!accordionControl) return
+            const accordionItem = accordionControl.parentElement
+            const accordionContent = accordionControl.nextElementSibling
+
+            accordionItem.classList.toggle('accordion-list__item--opened')
+
+            if (accordionItem.classList.contains('accordion-list__item--opened')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+            } else {
+                accordionContent.style.maxHeight = null
+            }
+        })
+    })
 
 })()
