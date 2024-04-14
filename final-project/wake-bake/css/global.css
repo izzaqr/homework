@@ -1,0 +1,194 @@
+:root {
+    --akcentnyy: #ffa55c;
+    --akcentnyy-2: #ceaad0;
+    --fonovyy: #ffe0cb;
+    --fonovyy-svetlyy: #fff9f4;
+    --zagolovochnyy: #1f1711;
+    --nabornyy: #312c27;
+    --fioletovyy: #704174;
+    --disabled: #e1d9e1;
+    --inputy: #ac907a;
+    --second-family: "Gabriola", sans-serif;
+    --third-family: "Inspiration", sans-serif;
+}
+
+.body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 1.5;
+    color: var(--nabornyy);
+    background: var(--fonovyy-svetlyy);
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.body--opened-modal {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 74px;
+    line-height: 82%;
+    color: var(--zagolovochnyy);
+}
+
+.button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 60px;
+    padding: 18px 36px;
+    height: 62px;
+    background: var(--akcentnyy);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: all .7s;
+}
+
+.button:hover {
+    background: #ff9138;
+}
+
+.modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+}
+
+.body--opened-modal .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__window {
+    background: var(--fonovyy-svetlyy);
+    border-radius: 20px;
+    padding: 0 60px 60px;
+    width: 428px;
+    height: 491px;
+    position: relative;
+}
+
+.modal__cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal__cancel path,
+.modal__cancel rect {
+    transition: all .7s;
+}
+
+.modal__cancel:hover path,
+.modal__cancel:hover rect {
+    stroke: var(--inputy);
+}
+
+.modal__img {
+    padding-left: 12px;
+    margin-top: -65px;
+    padding-bottom: 15px;
+}
+
+.modal__content {
+    display: grid;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.modal__title {
+    font-family: var(--second-family);
+    font-size: 42px;
+    line-height: .9;
+    color: var(--zagolovochnyy);
+}
+
+.modal__form {
+    display: grid;
+    gap: 10px;
+}
+
+.modal__label {
+    position: relative;
+}
+
+.modal__label span {
+    position: absolute;
+    color: var(--inputy);
+    top: 12px;
+    left: 28px;
+    font-size: 11px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+}
+
+.modal__input {
+    border: 1px solid var(--inputy);
+    border-radius: 100px;
+    padding: 19px 79px 19px 28px;
+    width: 100%;
+    height: 62px;
+    font-size: 15px;
+    transition: all .4s;
+    background: rgba(255, 224, 203, 0.02);
+}
+
+.modal__input:focus {
+    padding: 27px 79px 12px 28px;
+}
+
+.modal__input:focus+span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__input:hover {
+    border: 1px solid var(--akcentnyy);
+}
+
+.modal__input::placeholder {
+    color: var(--inputy);
+    transition: all .4s;
+}
+
+.modal__input:hover::placeholder {
+    color: var(--akcentnyy);
+}
+
+.modal__button {
+    width: 100%;
+}
