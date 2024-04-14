@@ -78,23 +78,86 @@
 
     // accordion
 
-    const accordionLists = document.querySelectorAll('.accordion-list')
+    // const accordionLists = document.querySelectorAll('.accordion-list')
+
+    // accordionLists.forEach(el => {
+    //     el.addEventListener('click', (e) => {
+    //         const accordionControl = e.target.closest('.accordion-list__control')
+    //         if (!accordionControl) return
+    //         const accordionItem = accordionControl.parentElement
+    //         const accordionContent = accordionControl.nextElementSibling
+
+    //         accordionItem.classList.toggle('accordion-list__item--opened')
+
+    //         if (accordionItem.classList.contains('accordion-list__item--opened')) {
+    //             accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+    //         } else {
+    //             accordionContent.style.maxHeight = null
+    //         }
+    //     })
+    // })
+
+    const accordionLists = document.querySelectorAll('.accordion-list');
 
     accordionLists.forEach(el => {
-        el.addEventListener('click', (e) => {
-            const accordionControl = e.target.closest('.accordion-list__control')
-            if (!accordionControl) return
-            const accordionItem = accordionControl.parentElement
-            const accordionContent = accordionControl.nextElementSibling
 
-            accordionItem.classList.toggle('accordion-list__item--opened')
+        el.addEventListener('click', (e) => {
+
+            const accordionList = e.currentTarget
+            const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
+            const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
+
+            const accordionControl = e.target.closest('.accordion-list__control');
+            if (!accordionControl) return
+            const accordionItem = accordionControl.parentElement;
+            const accordionContent = accordionControl.nextElementSibling;
+
+            if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
+                accordionOpenedItem.classList.remove('accordion-list__item--opened');
+                accordionOpenedContent.style.maxHeight = null;
+            }
+            accordionItem.classList.toggle('accordion-list__item--opened');
 
             if (accordionItem.classList.contains('accordion-list__item--opened')) {
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
             } else {
-                accordionContent.style.maxHeight = null
+                accordionContent.style.maxHeight = null;
             }
-        })
-    })
+
+        });
+
+    });
+
+    // slider
+
+    const swiper = new Swiper('.gallery__slider', {
+        spaceBetween: 30,
+        slidesPerView: 4,
+
+        pagination: {
+            el: '.gallery__pagination',
+            type: 'fraction',
+        },
+
+        navigation: {
+            nextEl: '.gallery__next',
+            prevEl: '.gallery__prev',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 40
+            },
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            980: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+        }
+    });
 
 })()
