@@ -505,8 +505,6 @@
     width: 100%;
 }
 
-.swiper-scrollbar {}
-
 
 /* --------------------------------- */
 /* --------------------------------- */
@@ -689,7 +687,7 @@
 
     .program-top__text {
         margin: 0;
-        font-size: 2.5vw;
+        font-size: 19px;
         text-align: center;
     }
 
@@ -707,6 +705,10 @@
 }
 
 @media (max-width: 735px) {
+    .program-top__text {
+        font-size: 2.5vw;
+    }
+
     .accordion {
         width: 90vw;
     }
@@ -819,7 +821,7 @@
     }
 
     .accordion-content__col {
-        font-size: 2.9vw;
+        font-size: 3.2vw;
     }
 
     .accordion-content__item {
@@ -890,6 +892,10 @@
         font-size: 13vw;
     }
 
+    .accordion-content {
+        gap: 5px;
+    }
+
     .accordion-list__control-title {
         font-size: 6.9vw;
     }
@@ -905,6 +911,88 @@
 
     .program__discount:first-child {
         font-size: 5.4vw;
+    }
+}
+
+/* gallery */
+@media (max-width: 1200px) {
+    .gallery__inner {
+        gap: 30px;
+        grid-template-columns: .7fr 1fr;
+    }
+
+    .gallery__img {
+        align-self: center;
+        min-width: 0;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .program {
+        padding-bottom: 80px;
+    }
+
+    .gallery__content {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery__info {
+        justify-self: center;
+        margin-bottom: 20px;
+    }
+
+    .gallery__img {
+        display: none;
+    }
+
+    .gallery__info {
+        max-width: 700px;
+        font-size: 18px;
+    }
+
+    .gallery__title {
+        text-align: center;
+    }
+
+    .gallery__text {
+        text-align: center;
+    }
+
+    .gallery__nav {
+        grid-row: 2;
+        max-width: 200px;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .gallery__inner {
+        margin-bottom: 25px;
+    }
+
+    .gallery__title {
+        font-size: 14vw;
+        margin-bottom: 10px;
+    }
+
+    .gallery__text {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 410px) {
+    .gallery__text {
+        font-size: 3.9vw;
+    }
+
+    .gallery__pagination {
+        align-self: center;
+        font-size: 9vw;
     }
 }
 
