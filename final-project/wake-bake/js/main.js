@@ -130,7 +130,7 @@
 
     // slider
 
-    const swiper = new Swiper('.gallery__slider', {
+    const swiperGallery = new Swiper('.gallery__slider', {
         spaceBetween: 30,
         slidesPerView: 4,
 
@@ -147,17 +147,45 @@
         breakpoints: {
             320: {
                 slidesPerView: 2,
-                spaceBetween: 40
+                spaceBetween: 10
             },
-            640: {
+            550: {
                 slidesPerView: 3,
-                spaceBetween: 30
+                spaceBetween: 20
             },
-            980: {
+            850: {
                 slidesPerView: 4,
-                spaceBetween: 30
+                spaceBetween: 20
             },
         }
     });
 
+
+    // slider review
+
+    const swiperReview = new Swiper('.reviews__swiper', {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        centeredSlides: true,
+        speed: 500,
+
+        navigation: {
+            nextEl: '.reviews__next',
+            prevEl: '.reviews__prev',
+        },
+
+        scrollbar: {
+            el: '.reviews__scrollbar',
+            draggable: true,
+        },
+
+        breakpoints: {
+            900: {
+                slidesPerView: 1.5,
+            },
+            1201: {
+                slidesPerView: 2,
+            }
+        }
+    });
 })()
