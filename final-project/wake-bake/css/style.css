@@ -402,7 +402,6 @@
 
 /* --------------------------- */
 
-
 .gallery {
     padding-bottom: 140px;
 }
@@ -444,19 +443,6 @@
     gap: 30px;
 }
 
-.gallery__prev {
-    background: transparent;
-    width: 36px;
-    height: 36px;
-    border: 1.5px solid var(--akcentnyy);
-    border-radius: 50%;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .4s;
-}
-
 .gallery__pagination {
     font-family: var(--second-family);
     font-size: 42px;
@@ -469,6 +455,7 @@
     justify-content: center;
 }
 
+.gallery__prev,
 .gallery__next {
     background: transparent;
     width: 36px;
@@ -480,6 +467,28 @@
     align-items: center;
     justify-content: center;
     transition: all .4s;
+}
+
+.swiper-button-disabled.gallery__prev,
+.swiper-button-disabled.gallery__next {
+    border: 1.50px solid var(--disabled);
+}
+
+.swiper-button-disabled.gallery__prev path,
+.swiper-button-disabled.gallery__next path {
+    fill: var(--disabled);
+}
+
+.swiper-button-disabled.gallery__prev:hover,
+.swiper-button-disabled.gallery__next:hover {
+    border: 1.50px solid var(--disabled);
+    background: none;
+    cursor: auto;
+}
+
+.swiper-button-disabled.gallery__prev:hover path,
+.swiper-button-disabled.gallery__next:hover path {
+    fill: var(--disabled);
 }
 
 .gallery__prev:hover,
@@ -496,15 +505,184 @@
     fill: var(--fonovyy-svetlyy);
 }
 
-.swiper-slide {
+.gallery__slide {
     border-radius: 20px;
     overflow: hidden;
 }
 
-.swiper-slide img {
+.gallery__slide img {
     width: 100%;
 }
 
+/* -------------------------------- */
+
+.reviews {
+    padding-bottom: 140px;
+}
+
+.reviews__inner {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.reviews__info {
+    max-width: 632px;
+}
+
+.reviews__title {
+    margin-bottom: 20px;
+    font-family: var(--second-family);
+    font-size: 74px;
+    line-height: .82;
+    color: var(--zagolovochnyy);
+}
+
+.reviews__text {}
+
+.reviews__nav {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 30px;
+}
+
+.reviews__prev,
+.reviews__next {
+    background: transparent;
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid var(--akcentnyy);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+}
+
+.swiper-button-disabled.reviews__prev,
+.swiper-button-disabled.reviews__next {
+    border: 1.50px solid var(--disabled);
+}
+
+.swiper-button-disabled.reviews__prev path,
+.swiper-button-disabled.reviews__next path {
+    fill: var(--disabled);
+}
+
+.swiper-button-disabled.reviews__prev:hover,
+.swiper-button-disabled.reviews__next:hover {
+    border: 1.50px solid var(--disabled);
+    background: none;
+    cursor: auto;
+}
+
+.swiper-button-disabled.reviews__prev:hover path,
+.swiper-button-disabled.reviews__next:hover path {
+    fill: var(--disabled);
+}
+
+.reviews__prev:hover,
+.reviews__next:hover {
+    background: var(--akcentnyy);
+    fill: var(--fonovyy-svetlyy);
+}
+
+.reviews__prev:hover path {
+    fill: var(--fonovyy-svetlyy);
+}
+
+.reviews__next:hover path {
+    fill: var(--fonovyy-svetlyy);
+}
+
+.reviews__swiper {
+    overflow: visible;
+}
+
+.reviews__wrapper {
+    margin-bottom: 40px;
+}
+
+.reviews__slide {
+    padding: 30px;
+    background: var(--fonovyy);
+    opacity: .5;
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    transition: all .4s;
+}
+
+.swiper-backface-hidden .swiper-slide {
+    transform: scale(.9);
+}
+
+.reviews__slide.swiper-slide-active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.reviews__student {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews__student-img {
+    padding-bottom: 20px;
+    width: 165px;
+}
+
+.reviews__student-img img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.reviews__student-name {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.reviews__student-inst {
+    fill: var(--akcentnyy-2);
+    color: var(--akcentnyy-2);
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.reviews__scrollbar.swiper-scrollbar {
+    position: static;
+}
+
+.reviews__scrollbar {
+    min-height: 7px;
+    background: var(--fonovyy);
+}
+
+.swiper-scrollbar-drag {
+    background: var(--akcentnyy);
+}
+
+.reviews__quote {
+    width: 369px;
+}
+
+.reviews__quote span {
+    margin-bottom: 10px;
+}
+
+.reviews__quote span {
+    display: block;
+    font-family: var(--second-family);
+    font-size: 32px;
+    line-height: .9;
+    color: var(--zagolovochnyy);
+}
 
 /* --------------------------------- */
 /* --------------------------------- */
@@ -987,13 +1165,86 @@
 
 @media (max-width: 410px) {
     .gallery__text {
-        font-size: 3.9vw;
+        font-size: 4.4vw;
     }
 
     .gallery__pagination {
         align-self: center;
         font-size: 9vw;
     }
+}
+
+/* reviews */
+@media (max-width: 620px) {
+    .gallery {
+        padding-bottom: 80px;
+    }
+
+    .reviews__slide {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .reviews__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .reviews__student {
+        align-items: center;
+    }
+
+    .reviews__title {
+        text-align: center;
+        font-size: 14vw;
+    }
+
+    .reviews__text {
+        text-align: center;
+        font-size: 3.5vw;
+    }
+
+    .reviews__quote span {
+        font-size: 7vw;
+    }
+
+    .reviews__quote {
+        text-align: center;
+        align-self: center;
+        font-size: 3.6vw;
+        width: 85vw;
+    }
+}
+
+@media (max-width: 520px) {
+    .reviews__inner {
+        margin-bottom: 20px;
+    }
+
+    .reviews__nav {
+        margin: 0 auto;
+        gap: 50px;
+    }
+
+    .reviews__quote span {
+        font-size: 9vw;
+    }
+
+    .reviews__quote {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 410px) {
+    .reviews__text {
+        font-size: 4.4vw;
+    }
+
+    .reviews__quote {}
 }
 
 /* footer */
@@ -1043,6 +1294,8 @@
 
     .footer__logo-text {
         font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
     }
 
     .socials__link svg {
@@ -1079,6 +1332,11 @@
     .socials__link svg {
         width: 45px;
         height: 45px;
+    }
+
+    .footer__info-item {
+        display: flex;
+        max-width: 180px;
     }
 }
 
