@@ -1,0 +1,116 @@
+.about {
+    padding: 140px 0;
+}
+
+.about__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 53px;
+}
+
+.about__img {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.about__img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.about__img-gift {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    gap: 10px;
+    bottom: 4.6%;
+    left: 5%;
+    background: rgba(149, 123, 151, 0.9);
+    color: var(--fonovyy-svetlyy);
+    border-radius: 20px;
+    padding: 15px 20px;
+    max-width: 299px;
+    height: 108px;
+}
+
+.about__gift-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: var(--fonovyy-svetlyy);
+    position: relative;
+}
+
+.about__gift-icon::before {
+    content: '';
+    position: absolute;
+    border: 1px solid var(--akcentnyy-2);
+    border-radius: 50%;
+    inset: 5px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.about__gift-icon:hover::before {
+    opacity: 1;
+}
+
+.about__overview {
+    max-width: 623px;
+    padding-bottom: 40px;
+}
+
+.about__title {
+    padding-bottom: 30px;
+}
+
+.about__title h2 {
+    font-family: "Gabriola", sans-serif;
+    font-size: 74px;
+    line-height: .82;
+    color: var(--zagolovochnyy);
+}
+
+.about__features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 624px;
+}
+
+.about__features--mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 624px;
+    display: none;
+}
+
+.about__section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 29px 23px;
+    background: var(--fonovyy);
+    border-radius: 20px;
+}
+
+.about__section-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--nabornyy);
+}
