@@ -12,6 +12,11 @@
     --third-family: "Inspiration", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+    }
+
 .body {
     font-family: "Montserrat", "Arial", sans-serif;
     line-height: 1.5;

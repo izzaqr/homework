@@ -909,10 +909,6 @@
         margin: 0 auto;
     }
 
-    .application__checkbox label {
-        /* font-size: 3vw; */
-    }
-
     .application__button {
         justify-self: center;
         width: 85vw;
