@@ -9,10 +9,7 @@
         const burgerNavLink = e.target.closest('.nav__link')
 
         if (!burgerIcon && !burgerNavLink) return
-
-        // if (burgerIcon) {
-        //     e.preventDefault()
-        // }
+        if (document.documentElement.clientWidth > 950) return
 
         if (!document.body.classList.contains('body--opened-menu')) {
             document.body.classList.add('body--opened-menu')
@@ -77,25 +74,6 @@
     }
 
     // accordion
-
-    // const accordionLists = document.querySelectorAll('.accordion-list')
-
-    // accordionLists.forEach(el => {
-    //     el.addEventListener('click', (e) => {
-    //         const accordionControl = e.target.closest('.accordion-list__control')
-    //         if (!accordionControl) return
-    //         const accordionItem = accordionControl.parentElement
-    //         const accordionContent = accordionControl.nextElementSibling
-
-    //         accordionItem.classList.toggle('accordion-list__item--opened')
-
-    //         if (accordionItem.classList.contains('accordion-list__item--opened')) {
-    //             accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
-    //         } else {
-    //             accordionContent.style.maxHeight = null
-    //         }
-    //     })
-    // })
 
     const accordionLists = document.querySelectorAll('.accordion-list');
 
@@ -190,6 +168,7 @@
     });
 
     // phone
-
-    $(".phone").mask("+7(999)999-9999");
+    let inputs = document.querySelectorAll('input[type="tel"]')
+    let im = new Inputmask('+7 (999) 999-99-99')
+    im.mask(inputs)
 })()
