@@ -157,6 +157,10 @@
         display: flex;
     }
 
+    .cards {
+        padding-bottom: 70px;
+    }
+
     .cards__inner {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -165,6 +169,11 @@
     .card {
         width: 90vw;
     }
+
+    .proposal {
+        padding-bottom: 70px;
+    }
+    
 }
 
 @media (max-width: 1140px) {
