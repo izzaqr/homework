@@ -77,6 +77,8 @@
 
 .hero__button {
     grid-row: 3;
+    width: 264px;
+    height: 68px;
 }
 
 .hero__img {
