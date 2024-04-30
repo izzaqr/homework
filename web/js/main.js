@@ -37,4 +37,23 @@
         }
     }
 
+    // swiper
+
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 1.1,
+        spaceBetween: 20,
+        freeMode: true,
+
+        breakpoints: {
+            650: {
+                slidesPerView: 2.1,
+                spaceBetween: 20,
+            },
+            1300: {
+                slidesPerView: 3,
+                spaceBetween: 64,
+            }
+        }
+    });
+
 })()
