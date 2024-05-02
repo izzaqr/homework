@@ -183,14 +183,6 @@
         grid-row: 2;
     }
 
-    .services {
-        display: flex;
-    }
-
-    .case {
-        display: flex;
-    }
-
     .cards {
         padding-bottom: 60px;
     }
@@ -400,6 +392,22 @@
 
     .case__title {
         margin: 0 auto;
+    }
+
+    .process {
+        display: flex;
+    }
+
+    .process__inner {
+        flex-direction: column;
+        gap: 30px;
+        max-width: 80vw;
+        text-align: center;
+    }
+
+    .process__title {
+        margin: 0 auto;
+        min-width: 200px;
     }
 
     .proposal {
