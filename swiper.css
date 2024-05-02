@@ -1,0 +1,109 @@
+.case {
+    padding-bottom: 80px;
+}
+
+.case__inner {
+    display: flex;
+    gap: 40px;
+    width: 820px;
+}
+
+.case__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    border-radius: 7px;
+    padding: 0px 7px;
+    min-width: 265px;
+    height: max-content;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+/* ========================= */
+/* ========================= */
+/* ========================= */
+
+.case {
+    padding-bottom: 80px;
+}
+
+.case__inner {
+    display: flex;
+    gap: 40px;
+    width: 820px;
+}
+
+.case__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    border-radius: 7px;
+    padding: 0px 7px;
+    min-width: 265px;
+    height: max-content;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+/* ========================= */
+/* ========================= */
+/* ========================= */
+
+.studies {
+    padding-bottom: 140px;
+}
+
+.swiper {
+    background: var(--dark);
+    border-radius: 45px;
+    padding: 70px 60px;
+    width: 100%;
+    height: 326px;
+    overflow: hidden;
+}
+
+.swiper-mobile {
+    display: none;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-wrapper img {
+    margin-right: 64px;
+    transition: all .4s;
+}
+
+.swiper-slide {
+    cursor: default;
+    width: 286px;
+    margin-right: 64px;
+    position: relative;
+}
+
+.swiper-slide-prev+img {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.swiper-wrapper img {
+    transition: all .4s;
+}
+
+.swiper-slide__text {
+    color: #fff;
+    margin-bottom: 20px;
+    width: 286px;
+}
+
+.swiper-slide__link {
+    color: var(--green);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}

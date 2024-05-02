@@ -1,0 +1,113 @@
+html {
+    /* scroll-behavior: smooth; */
+}
+
+.body {
+    font-family: "Space Grotesk", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--black);
+}
+
+.body--opened-modal {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1255px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark);
+    border: 1px solid var(--dark);
+    border-radius: 14px;
+    padding: 20px 35px;
+    width: 100%;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
+    transition: all .4s;
+}
+
+.button:hover {
+    background: #fff;
+    color: var(--black);
+}
+
+.burger-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    z-index: 11;
+}
+
+.burger-icon span,
+.burger-icon span::before,
+.burger-icon span::after {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 100px;
+    background: var(--black);
+}
+
+.burger-icon span {
+    position: relative;
+}
+
+.burger-icon span::before,
+.burger-icon span::after {
+    content: '';
+    position: absolute;
+    transition: all .1s;
+}
+
+.burger-icon span::before {
+    top: -8px;
+}
+
+.burger-icon span::after {
+    bottom: -8px;
+}
+
+.burger--opened {
+    overflow: hidden;
+}
+
+.burger--opened .burger-icon span {
+    background: transparent;
+}
+
+.burger--opened .burger-icon span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger--opened .burger-icon span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
