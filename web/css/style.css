@@ -2,6 +2,8 @@
 @import url('../css/header.css');
 @import url('../css/cards.css');
 @import url('../css/swiper.css');
+@import url('../css/accordion.css');
+@import url('../css/team.css');
 
 :root {
     --green: #b9ff66;
@@ -15,146 +17,7 @@
 /* ========================= */
 /* ========================= */
 
-.process {
-    padding-bottom: 80px;
-}
 
-.process__inner {
-    display: flex;
-    gap: 40px;
-    width: 750px;
-}
-
-.process__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--green);
-    border-radius: 7px;
-    padding: 0px 7px;
-    min-width: 420px;
-    height: max-content;
-    font-weight: 500;
-    font-size: 40px;
-}
-
-/* ========================= */
-/* ========================= */
-/* ========================= */
-
-.accordion {
-    padding-bottom: 140px;
-}
-
-.accordion-list__item {
-    box-shadow: 0 5px 0 0 var(--dark);
-    background: var(--grey);
-    border: 1px solid var(--dark);
-    border-radius: 45px;
-    margin: 0 auto;
-    width: 1234px;
-    margin-bottom: 30px;
-    transition: all .4s;
-}
-
-.accordion-list__item--opened.accordion-list__item {
-    background: var(--green);
-}
-
-.accordion-list__item:last-child {
-    margin-bottom: 0;
-}
-
-.accordion-list__control {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-    width: 100%;
-    padding: 40px 60px;
-    background: transparent;
-
-    transition: all .4s;
-}
-
-.accordion-list__control-title {
-    font-weight: 500;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 25px;
-}
-
-.accordion-list__control-title span {
-    font-size: 60px;
-}
-
-.accordion-list__control-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    background: #fff;
-    width: 59px;
-    height: 59px;
-    border-radius: 100%;
-    fill: var(--grey);
-    border: 1px solid var(--dark);
-    position: relative;
-    transition: all .4s;
-}
-
-.accordion-list__control-icon::before,
-.accordion-list__control-icon::after {
-    content: '';
-    background: var(--black);
-    width: 26px;
-    height: 7px;
-    position: absolute;
-    transition: all .2s;
-}
-
-.accordion-list__control-icon::after {
-    content: '';
-    transform: rotate(90deg);
-}
-
-.accordion-list__item--opened .accordion-list__control-icon::after {
-    transform: rotate(0deg);
-}
-
-.accordion-list__content {
-    max-height: 0;
-    overflow: hidden;
-    transition: all .4s;
-}
-
-.accordion-list__item--opened .accordion-list__content {
-    transition: all .4s;
-}
-
-.accordion-content {
-    padding: 0 60px 40px;
-    display: flex;
-    flex-direction: column;
-    transition: all .4s;
-    height: max-content;
-}
-
-.accordion-content__line {
-    width: 100%;
-    border-top: 1px solid var(--black);
-    margin-bottom: 30px;
-    transition: all .4s;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.accordion-list__item--opened .accordion-content__line {
-    opacity: 1;
-    visibility: visible;
-}
 
 /* ========================= */
 /* ========================= */
@@ -239,6 +102,37 @@
     .accordion-list__item {
         width: 98vw;
     }
+
+    .team__head {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    .team__head-inner {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .team__head-title {
+        margin: 0 auto;
+    }
+
+    .team__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team__card {
+        width: 46.5vw;
+    }
+
+    .team__button {
+        margin: 40px auto 0;
+        width: 64vw;
+    }
 }
 
 @media (max-width: 1140px) {
@@ -292,6 +186,10 @@
 
     .proposal__img {
         right: 2%;
+    }
+
+    .team__card {
+        width: auto;
     }
 }
 
@@ -366,6 +264,7 @@
 
     .services {
         display: flex;
+        justify-content: center;
     }
 
     .services__inner {
@@ -381,6 +280,7 @@
 
     .case {
         display: flex;
+        justify-content: center;
     }
 
     .case__inner {
@@ -396,6 +296,7 @@
 
     .process {
         display: flex;
+        padding-bottom: 40px;
     }
 
     .process__inner {
@@ -439,6 +340,18 @@
 
     .accordion-list__control {
         padding: 45px 45px;
+    }
+
+    .team__inner {
+        gap: 30px;
+    }
+
+    .team__card {
+        width: 75vw;
+    }
+
+    .team__card-text {
+        width: 90%;
     }
 }
 
@@ -578,6 +491,14 @@
         width: 20px;
         height: 4px;
     }
+
+    .team__card {
+        width: 99vw;
+    }
+
+    .team__button {
+        width: 100%;
+    }
 }
 
 @media (max-width: 440px) {
@@ -615,6 +536,23 @@
 
     .accordion-content__text {
         font-size: 4.5vw;
+    }
+
+    .team__card {
+        padding: 30px 30px;
+    }
+
+    .team__card-info {
+        max-width: 167px;
+    }
+
+    .team__card-icon {
+        top: 7%;
+        right: 5%;
+    }
+
+    .team__card-text {
+        width: 290px;
     }
 }
 
