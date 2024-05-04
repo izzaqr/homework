@@ -56,7 +56,7 @@
     padding-bottom: 140px;
 }
 
-.swiper {
+.studies__swiper {
     background: var(--dark);
     border-radius: 45px;
     padding: 70px 60px;
@@ -78,9 +78,9 @@
     transition: all .4s;
 }
 
-.swiper-slide {
+.studies__swiper-slide {
     cursor: default;
-    width: 286px;
+    max-width: 286px;
     margin-right: 64px;
     position: relative;
 }
