@@ -4,6 +4,7 @@
 @import url('../css/swiper.css');
 @import url('../css/accordion.css');
 @import url('../css/team.css');
+@import url('../css/testimonials.css');
 
 :root {
     --green: #b9ff66;
@@ -85,7 +86,7 @@
         display: flex;
     }
 
-    .swiper-slide {
+    .studies__swiper-slide {
         background: var(--dark);
         border-radius: 45px;
         padding: 42px 50px;
@@ -100,7 +101,11 @@
     }
 
     .accordion-list__item {
-        width: 98vw;
+        width: 95vw;
+    }
+
+    .team {
+        padding-bottom: 60px;
     }
 
     .team__head {
@@ -132,6 +137,26 @@
     .team__button {
         margin: 40px auto 0;
         width: 64vw;
+    }
+
+    .testimonials__head {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    .testimonials__head-inner {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .testimonials__head-title {
+        margin: 0 auto;
+    }
+
+    .testimonials {
+        padding-bottom: 60px;
     }
 }
 
@@ -390,6 +415,31 @@
     }
 }
 
+@media (max-width: 660px) {
+    .testimonials__swiper {
+        padding: 30px;
+    }
+
+    .swiper-slide__bubble {
+        width: 85vw;
+        height: 300px;
+    }
+
+    .swiper-slide__bubble p {
+        min-width: initial;
+    }
+
+    .testimonials__controls {
+        width: 74vw;
+        margin: 60px auto 60px;
+    }
+
+    .testimonials-next a,
+    .testimonials-prev a {
+        padding: 0;
+    }
+}
+
 @media (max-width: 560px) {
     .header {
         padding: 30px 0 60px;
@@ -493,11 +543,23 @@
     }
 
     .team__card {
-        width: 99vw;
+        width: 95vw;
     }
 
     .team__button {
         width: 100%;
+    }
+
+    .swiper-slide__bubble {
+        height: 330px;
+    }
+
+    .testimonials-pagination {
+        gap: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        background-size: 18px;
     }
 }
 
@@ -521,7 +583,7 @@
         padding: 20px 20px;
     }
 
-    .swiper-slide {
+    .studies__swiper-slide {
         padding: 35px 35px;
     }
 
@@ -553,6 +615,37 @@
 
     .team__card-text {
         width: 290px;
+    }
+
+    .testimonials__swiper {
+        padding: 20px 30px;
+    }
+
+    .swiper-slide__bubble {
+        height: 90%;
+        padding: 25px 25px;
+    }
+
+    .swiper-slide__bubble p {
+        font-size: 16px;
+    }
+
+    .swiper-slide__bubble:after {
+        bottom: -29px;
+    }
+
+    .testimonials__controls {
+        width: 70vw;
+    }
+
+    .testimonials-pagination {
+        gap: 0;
+    }
+
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        background-size: 14px;
     }
 }
 

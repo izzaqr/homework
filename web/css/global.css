@@ -111,3 +111,7 @@ html {
     bottom: 0;
     transform: rotate(-45deg);
 }
+
+.swiper-wrapper {
+    user-select: none;
+}
