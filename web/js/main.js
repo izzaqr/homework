@@ -1,5 +1,7 @@
 (function () {
 
+    // burger menu
+
     document.addEventListener('click', burgerInit);
 
     function burgerInit(e) {
@@ -35,14 +37,13 @@
         if (e.target.closest('.modal__cancel') || e.target.classList.contains('modal')) {
             document.body.classList.remove('body--opened-modal')
         }
-    }
+    };
 
     // swiper
 
     const swiper = new Swiper(".swiper", {
         slidesPerView: 1.1,
         spaceBetween: 20,
-        freeMode: false,
 
         breakpoints: {
             650: {
@@ -54,7 +55,7 @@
                 spaceBetween: 64,
             }
         }
-    });
+    })
 
     // accordion
 
@@ -87,6 +88,25 @@
 
         });
 
+    });
+
+    // swiperTestimonials
+
+    const swiperTestimonials = new Swiper('.testimonials__swiper', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 50,
+        touchRatio: .5,
+
+        pagination: {
+            el: '.testimonials-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.testimonials-next',
+            prevEl: '.testimonials-prev',
+        },
     });
 
 })()
