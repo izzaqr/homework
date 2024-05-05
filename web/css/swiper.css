@@ -67,6 +67,7 @@
 
 .swiper-mobile {
     display: none;
+    overflow: visible;
 }
 
 .swiper-wrapper {
@@ -81,6 +82,7 @@
 .studies__swiper-slide {
     cursor: default;
     max-width: 286px;
+    height: initial;
     margin-right: 64px;
     position: relative;
 }

@@ -18,7 +18,149 @@
 /* ========================= */
 /* ========================= */
 
+.form__head {
+    padding-bottom: 80px;
+}
 
+.form__head-inner {
+    display: flex;
+    gap: 40px;
+    width: 600px;
+}
+
+.form__head-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    border-radius: 7px;
+    padding: 0px 7px;
+    min-width: max-content;
+    height: max-content;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+/* ========================= */
+
+.form {
+    padding-bottom: 140px;
+}
+
+.form__inner {
+    display: flex;
+    position: relative;
+    background: var(--grey);
+    border-radius: 45px;
+    padding: 60px 100px 80px 100px;
+}
+
+.form__content {
+    min-width: 556px;
+    z-index: 1;
+}
+
+.form__radio {
+    display: flex;
+    gap: 35px;
+}
+
+.form__control {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+/* custom checkbox */
+/* ======================== */
+
+.form__control input {
+    appearance: none;
+    flex-shrink: 0;
+    cursor: pointer;
+    border: 1px solid var(--black);
+    background-color: #fff;
+    border-radius: 29px;
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+
+.form__control input:hover {
+    background-color: var(--grey);
+}
+
+.form__control input:checked::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: var(--green);
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+}
+
+.form__control label {
+    cursor: pointer;
+}
+
+/* ======================== */
+
+.form__data {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__data label {
+    margin-bottom: 5px;
+}
+
+.form__data input {
+    margin-bottom: 35px;
+    max-width: 556px;
+}
+
+.form-name__input {
+    border: 1px solid var(--black);
+    border-radius: 14px;
+    padding: 18px 30px;
+    width: 556px;
+    height: 59px;
+    font-size: 18px;
+    color: #898989;
+}
+
+.form-email__input {
+    border: 1px solid var(--black);
+    border-radius: 14px;
+    padding: 18px 30px;
+    width: 556px;
+    height: 59px;
+    font-size: 18px;
+    color: #898989;
+}
+
+.form-message__textarea {
+    border: 1px solid var(--black);
+    border-radius: 14px;
+    padding: 18px 30px;
+    width: 556px;
+    height: 190px;
+    font-size: 18px;
+    color: #898989;
+    resize: none;
+}
+
+.form__button {
+    margin-top: 40px;
+}
+
+.form__img {
+    position: absolute;
+    left: calc(100% - 370px);
+}
 
 /* ========================= */
 /* ========================= */
@@ -72,7 +214,7 @@
         padding-bottom: 60px;
     }
 
-    .swiper {
+    .studies__swiper {
         display: none;
         background: initial;
         border-radius: initial;
@@ -84,6 +226,10 @@
 
     .swiper-mobile {
         display: flex;
+    }
+
+    .swiper-mobile .studies__swiper-slide {
+        max-width: initial;
     }
 
     .studies__swiper-slide {
@@ -158,6 +304,22 @@
     .testimonials {
         padding-bottom: 60px;
     }
+
+    .form__head {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    .form__head-inner {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .form__head-title {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 1140px) {
@@ -213,8 +375,20 @@
         right: 2%;
     }
 
+    .team__button {
+        width: 72vw;
+    }
+
     .team__card {
         width: auto;
+    }
+
+    .form__inner {
+        justify-content: center;
+    }
+
+    .form__img {
+        display: none;
     }
 }
 
@@ -438,6 +612,36 @@
     .testimonials-prev a {
         padding: 0;
     }
+
+    .form__inner {
+        display: flex;
+    }
+
+    .form__content {
+        min-width: initial;
+    }
+
+    .form__radio {
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .form__control {
+        margin-bottom: 35px;
+    }
+
+    .form__data {
+        width: 85vw;
+        margin: 0 auto;
+    }
+
+    .form__data input {
+        width: 100%;
+    }
+
+    .form-message__textarea {
+        width: 100%;
+    }
 }
 
 @media (max-width: 560px) {
@@ -561,6 +765,18 @@
     .swiper-pagination-bullet {
         background-size: 18px;
     }
+
+    .form__inner {
+        padding: 40px 30px 50px;
+    }
+
+    .form__radio {
+        justify-content: center;
+    }
+
+    .form__control {
+        margin-bottom: 25px;
+    }
 }
 
 @media (max-width: 440px) {
@@ -647,10 +863,18 @@
         height: 20px;
         background-size: 14px;
     }
+
+    .form__radio {
+        gap: 40px;
+    }
 }
 
 @media (max-width: 350px) {
     .card {
         padding: 35px;
+    }
+
+    .form__radio {
+        gap: 20px;
     }
 }
