@@ -39,21 +39,34 @@
         }
     };
 
-    // swiper
+    // first swiper
 
-    const swiper = new Swiper(".swiper", {
-        slidesPerView: 1.1,
+    const swiper = new Swiper(".studies__swiper", {
+        slidesPerView: 3,
+        spaceBetween: 64,
+    })
+
+    const swiperMobile = new Swiper(".swiper-mobile", {
+        slidesPerView: '1.1',
         spaceBetween: 20,
 
         breakpoints: {
-            650: {
+            500: {
+                slidesPerView: 1.4,
+                spaceBetween: 20,
+            },
+            700: {
                 slidesPerView: 2.1,
                 spaceBetween: 20,
             },
-            1300: {
-                slidesPerView: 3,
-                spaceBetween: 64,
-            }
+            970: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+            1100: {
+                slidesPerView: 2.7,
+                spaceBetween: 20,
+            },
         }
     })
 
@@ -90,7 +103,7 @@
 
     });
 
-    // swiperTestimonials
+    // second swiperTestimonials
 
     const swiperTestimonials = new Swiper('.testimonials__swiper', {
         slidesPerView: 'auto',
