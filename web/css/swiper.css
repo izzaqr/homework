@@ -79,6 +79,10 @@
     transition: all .4s;
 }
 
+.swiper-mobile .studies__swiper-slide {
+    height: 252px;
+}
+
 .studies__swiper-slide {
     cursor: default;
     max-width: 286px;

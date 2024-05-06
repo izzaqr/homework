@@ -1,21 +1,18 @@
-.process {
+.process__head {
     padding-bottom: 80px;
 }
 
-.process__inner {
+.process__head-inner {
     display: flex;
     gap: 40px;
-    width: 750px;
+    max-width: 1000px;
 }
 
-.process__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.process__head-title {
     background: var(--green);
     border-radius: 7px;
     padding: 0px 7px;
-    min-width: 420px;
+    min-width: max-content;
     height: max-content;
     font-weight: 500;
     font-size: 40px;

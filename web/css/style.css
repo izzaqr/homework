@@ -86,7 +86,7 @@
     height: 185px;
 }
 
-.footer__info span {
+.footer__info a {
     display: block;
     margin-bottom: 20px;
 }
@@ -102,10 +102,7 @@
     color: var(--black);
     display: flex;
     align-items: center;
-}
-
-.footer__info span:last-child {
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 
 .footer__subscribe {
@@ -160,7 +157,7 @@
     line-height: 1.56;
 }
 
-.footer__bottom-text p:last-child {
+.footer__bottom-text a {
     text-decoration: underline;
     text-decoration-skip-ink: none;
 }
@@ -250,7 +247,7 @@
     }
 
     .accordion-list__item {
-        width: 95vw;
+        width: 90vw;
     }
 
     .team {
@@ -504,21 +501,20 @@
         margin: 0 auto;
     }
 
-    .process {
+    .process__head {
         display: flex;
+        justify-content: center;
         padding-bottom: 40px;
     }
 
-    .process__inner {
+    .process__head-inner {
         flex-direction: column;
         gap: 30px;
-        max-width: 80vw;
         text-align: center;
     }
 
-    .process__title {
+    .process__head-title {
         margin: 0 auto;
-        min-width: 200px;
     }
 
     .proposal {
@@ -678,6 +674,11 @@
     }
 
     .footer__info span {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .footer__info a {
         margin: 0 auto;
         text-align: center;
     }
@@ -868,7 +869,7 @@
     }
 
     .team__card {
-        width: 95vw;
+        width: 92vw;
     }
 
     .team__button {
@@ -946,6 +947,11 @@
         gap: 15px;
     }
 
+    .process__head-title {
+        display: flex;
+        flex-direction: column;
+    }
+
     .accordion-content {
         padding: 0 25px 25px;
     }
@@ -955,7 +961,7 @@
     }
 
     .team__card {
-        padding: 30px 30px;
+        padding: 30px 20px;
     }
 
     .team__card-info {

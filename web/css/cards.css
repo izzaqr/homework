@@ -16,9 +16,14 @@
     padding: 50px;
     width: 600px;
     height: 310px;
-
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    transition: all .4s;
+}
+
+.card:hover {
+    transform: scale(1.01);
 }
 
 .card:nth-child(2),
