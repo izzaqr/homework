@@ -82,7 +82,6 @@
 .studies__swiper-slide {
     cursor: default;
     max-width: 286px;
-    height: initial;
     margin-right: 64px;
     position: relative;
 }

@@ -1,0 +1,145 @@
+.form__head {
+    padding-bottom: 80px;
+}
+
+.form__head-inner {
+    display: flex;
+    gap: 40px;
+    width: 600px;
+}
+
+.form__head-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    border-radius: 7px;
+    padding: 0px 7px;
+    min-width: max-content;
+    height: max-content;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+/* ========================= */
+
+.form {
+    padding-bottom: 140px;
+}
+
+.form__inner {
+    display: flex;
+    position: relative;
+    background: var(--grey);
+    border-radius: 45px;
+    padding: 60px 100px 80px 100px;
+}
+
+.form__content {
+    min-width: 556px;
+    z-index: 1;
+}
+
+.form__radio {
+    display: flex;
+    gap: 35px;
+}
+
+.form__control {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+/* custom checkbox */
+/* ======================== */
+
+.form__control input {
+    appearance: none;
+    flex-shrink: 0;
+    cursor: pointer;
+    border: 1px solid var(--black);
+    background-color: #fff;
+    border-radius: 29px;
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+
+.form__control input:hover {
+    background-color: var(--grey);
+}
+
+.form__control input:checked::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: var(--green);
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+}
+
+.form__control label {
+    cursor: pointer;
+}
+
+/* ======================== */
+
+.form__data {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__data label {
+    margin-bottom: 5px;
+}
+
+.form__data input {
+    margin-bottom: 35px;
+    max-width: 556px;
+}
+
+.form-name__input {
+    border: 1px solid var(--black);
+    border-radius: 14px;
+    padding: 18px 30px;
+    width: 556px;
+    height: 59px;
+    font-size: 18px;
+    color: #898989;
+}
+
+.form-email__input {
+    border: 1px solid var(--black);
+    border-radius: 14px;
+    padding: 18px 30px;
+    width: 556px;
+    height: 59px;
+    font-size: 18px;
+    color: #898989;
+}
+
+.form-message__textarea {
+    border: 1px solid var(--black);
+    border-radius: 14px;
+    padding: 18px 30px;
+    width: 556px;
+    height: 190px;
+    font-size: 18px;
+    color: #898989;
+    resize: none;
+}
+
+.form__button {
+    margin-top: 40px;
+}
+
+
+
+.form__img {
+    position: absolute;
+    left: calc(100% - 370px);
+}
